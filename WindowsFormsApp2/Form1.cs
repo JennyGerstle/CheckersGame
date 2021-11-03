@@ -24,9 +24,9 @@ namespace WindowsFormsApp2
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            setUpPieces();
+            showPieces();
         }
-        public void setUpPieces()
+        public void showPieces()
         {
             PictureBox[,] squares = new PictureBox[BOARD_SIZE, BOARD_SIZE];
             for (int row = 0; row < BOARD_SIZE; row++)
