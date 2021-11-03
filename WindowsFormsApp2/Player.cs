@@ -8,7 +8,7 @@ namespace WindowsFormsApp2
 {
     enum Player
     {
-        BLACK,
-        WHITE
+        BLUE,
+        PURPLE
     }
 }
