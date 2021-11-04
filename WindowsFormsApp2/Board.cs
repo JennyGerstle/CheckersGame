@@ -8,11 +8,14 @@ namespace WindowsFormsApp2
 {
     class Board
     {
+
         public void movePieces()
         {
-            //move peices
-            //heuristic function to evaluate pos
+            //move pieces 
+            //check legal
             //show move - take you from to visualize the board
+            //alpha beta - pass board into this
+            //heuristic function to evaluate pos
         }
     }
 }

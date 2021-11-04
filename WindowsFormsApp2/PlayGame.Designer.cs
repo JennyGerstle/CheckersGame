@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp2
 {
-    partial class Form1
+    partial class PlayGame
     {
         /// <summary>
         /// Required designer variable.
@@ -53,6 +53,7 @@ namespace WindowsFormsApp2
             this.checkBoxColor.TabIndex = 1;
             this.checkBoxColor.Text = "Player Start ";
             this.checkBoxColor.UseVisualStyleBackColor = true;
+            this.checkBoxColor.CheckedChanged += new System.EventHandler(this.makePlayerGoFirst);
             // 
             // cbDifficulty
             // 
@@ -65,7 +66,7 @@ namespace WindowsFormsApp2
             this.cbDifficulty.Name = "cbDifficulty";
             this.cbDifficulty.Size = new System.Drawing.Size(121, 24);
             this.cbDifficulty.TabIndex = 2;
-            this.cbDifficulty.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbDifficulty.SelectedIndexChanged += new System.EventHandler(this.selectDifficulty);
             // 
             // button1
             // 
@@ -75,7 +76,7 @@ namespace WindowsFormsApp2
             this.button1.TabIndex = 3;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            this.button1.Click += new System.EventHandler(this.startGame);
             // 
             // pictureBox1
             // 
@@ -87,7 +88,7 @@ namespace WindowsFormsApp2
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // PlayGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -98,7 +99,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.checkBoxColor);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "PlayGame";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
