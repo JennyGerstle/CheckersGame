@@ -6,9 +6,26 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    enum Player
+    class Player
     {
-        BLUE,
-        PURPLE
+        private String color;
+        private Boolean user;
+
+        public Player(String color, Boolean user)
+        {
+            this.color = color;
+            this.user = user;
+        }
+
+        public String getColor()
+        {
+            return this.color;
+        }
+
+        public Boolean isUser()
+        {
+            return user;
+        }
     }
+    //user always on bottom. add if player is user or computer
 }

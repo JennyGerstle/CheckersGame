@@ -5,11 +5,8 @@ using System.Windows.Forms;
 namespace WindowsFormsApp2
 {
     //move pieces - gets a piece and a new location. changes the piece's location to new location 
-    //check legal - takes a to location and a piece and checks if it can move there
     //show move - takes in a piece and to location. move picturebox from from location to to location. change pieces location to new location.
-    //alpha beta - pass board into this
-    //heuristic function to evaluate pos
-    //update
+    
     public partial class PlayGame : Form
     {
         const int BOARD_SIZE = 8;
