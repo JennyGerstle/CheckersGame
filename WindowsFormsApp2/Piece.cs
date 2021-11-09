@@ -9,18 +9,24 @@ namespace WindowsFormsApp2
     class Piece
     {
         private Player player;
-        private Location location;
+        private Boolean knighted;
 
-        public Piece(Player player, Location location)
+        public Piece(Player player)
         {
             this.player = player;
-            this.location = location;
         }
 
-        public void moveLocation(Location newLocation)
+        public void knightPiece()
         {
-            this.location = newLocation;
+            this.knighted = true;
         }
+
+        public Boolean isKnighted()
+        {
+            return this.knighted;
+        }
+
+        
 
     }
 }
