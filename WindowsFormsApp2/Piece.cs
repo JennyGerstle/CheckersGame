@@ -9,9 +9,17 @@ namespace WindowsFormsApp2
     class Piece
     {
         private Player player;
-        public Piece(Player player)
+        private Location location;
+
+        public Piece(Player player, Location location)
         {
             this.player = player;
+            this.location = location;
+        }
+
+        public void moveLocation(Location newLocation)
+        {
+            this.location = newLocation;
         }
 
     }
