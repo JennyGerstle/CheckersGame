@@ -32,11 +32,6 @@ namespace WindowsFormsApp2
         {
             //this.difficulty = Convert.ToInt32(cbDifficulty.SelectedItem.ToString());
         }
-
-        private void button1_MouseClick(object sender, MouseEventArgs e)
-        {
-            //populateBoard();
-        }
         public void populateBoard(PictureBox[,] squares)
         {
             Player player;
