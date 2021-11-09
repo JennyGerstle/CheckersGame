@@ -29,6 +29,7 @@ public class Class1
                         if (!destinationSquare.location.compareTo(originSquare.location) < 0)
                         {
                             return false;
+
                         }
                     }
                 }
