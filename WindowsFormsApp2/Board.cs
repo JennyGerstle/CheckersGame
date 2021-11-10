@@ -4,9 +4,9 @@ public class Class1
 {
 	public Class1()
 	{
+     //add a map/array of squares with coordinate locations? when piece is moved update the board
 	//alpha beta - pass board into this
     //heuristic function to evaluate pos
-
 
 		public Boolean isLegal(Square destinationSquare, Square originSquare)
         {
@@ -49,6 +49,7 @@ public class Class1
         public void moveUserPiece(Square originSquare, Square DestinationSquare)
         {
             originSquare.movePiece(DestinationSquare);
+            //actually change the squares of the board
         }
 
 

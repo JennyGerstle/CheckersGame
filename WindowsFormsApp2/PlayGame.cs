@@ -4,8 +4,8 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    //move pieces - gets a piece and a new location. changes the piece's location to new location 
     //show move - takes in a piece and to location. move picturebox from from location to to location. change pieces location to new location.
+    //add functionality to change difficulty and first move player at the end
     
     public partial class PlayGame : Form
     {
@@ -19,6 +19,13 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             squares = setUpBoard();
+            // create a new board object
+            // when the user presses start: assign a piece to each square, and display them
+            //  calls play game:
+                    // until one player wins, alternates between user and computer
+                    // user's turn:
+                           //lets user move a piece - gets move, checks if its legal, makes move, displays move - how does it know when its user's turn to let them make thier move??
+                        
 
         }
         private void startGame(object sender, EventArgs e)
