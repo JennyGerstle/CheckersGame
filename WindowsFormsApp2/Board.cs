@@ -1,10 +1,10 @@
 ﻿using System;
 
-public class Class1
+public class Board
 {
-	public Class1()
+	public Board()
 	{
-     //add a map/array of squares with coordinate locations? when piece is moved update the board
+    //add a map/array of squares with coordinate locations? when piece is moved update the board
 	//alpha beta - pass board into this
     //heuristic function to evaluate pos
 
