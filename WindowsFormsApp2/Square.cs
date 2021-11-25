@@ -1,40 +1,40 @@
 ﻿using System;
 
-public class Class1
+namespace WindowsFormsApp2
 {
-	public Class1()
+	class Square
 	{
-		private const Location location;
+		private readonly Location location;
 		private Piece piece;
 
 		public Square(Location location)
-        {
+		{
 			this.location = location;
 			this.piece = null;
-        }
+		}
 
-		public Square(Location, location, Piece piece)
+		public Square(Location location, Piece piece)
 		{
 			this.location = location;
 			this.piece = piece;
 		}
 
 		public void movePiece(Square newSquare)
-        {
+		{
 			newSquare.givePiece(this.piece);
 			this.piece = null;
-			
-        }
 
-		public givePiece(Piece piece)
-        {
-			this.piece = piece;
-        }
+		}
 
-		public boolean isEmpty()
+		public void givePiece(Piece piece)
 		{
-			return this.piece == null; 
+			this.piece = piece;
+		}
+
+		public bool isEmpty()
+		{
+			return this.piece == null;
 		}
 	}
-
 }
+
