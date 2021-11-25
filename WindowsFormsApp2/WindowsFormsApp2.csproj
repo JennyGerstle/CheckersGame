@@ -57,6 +57,8 @@
     <Compile Include="Piece.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Square.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PlayGame.resx">
       <DependentUpon>PlayGame.cs</DependentUpon>
