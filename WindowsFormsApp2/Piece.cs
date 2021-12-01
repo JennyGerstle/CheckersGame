@@ -25,6 +25,10 @@ namespace WindowsFormsApp2
         {
             return this.knighted;
         }
+        public Player getPlayer()
+        {
+            return this.player;
+        }
 
         
 

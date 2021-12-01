@@ -1,8 +1,8 @@
 ﻿using System;
 
-public class Board
+namespace WindowsFormsApp2
 {
-	public Board()
+	class Board
 	{
         //add a map/array of squares with coordinate locations? when piece is moved update the board
         //alpha beta - pass board into this
@@ -10,35 +10,32 @@ public class Board
 
         public Boolean isLegal(Square destinationSquare, Square originSquare)
         {
-            double xCoord = newLocation.location.getX();
-            double yCoord = newLocation.location.getY();
+            double xCoord = destinationSquare.getLocation().getX();
+            double yCoord = destinationSquare.getLocation().getY();
 
             if (destinationSquare.isEmpty() && xCoord >= 1 && xCoord <= 400 && yCoord >= 1 && yCoord <= 400) //goes by pixels
             {  
-               if (!originSquare.piece.isKnighted())
+               if (!originSquare.getPiece().isKnighted())
                 {
-                    if (originSquare.piece.player.isUser())
+                    if (originSquare.getPiece().getPlayer().isUser())
                     {
-                        if (!destinationSquare.location.compareTo(originSquare.location) > 0)
+                        if (destinationSquare.getLocation().compareTo(originSquare.getLocation()) > 0)
                         {
-                            return false;
+                            return true;
                         }
                     }
                     else
                     {
-                        if (!destinationSquare.location.compareTo(originSquare.location) < 0)
+                        if (destinationSquare.getLocation().compareTo(originSquare.getLocation()) < 0)
                         {
-                            return false;
+                            return true;
 
                         }
                     }
                 }
 		        
             }
-            else
-            {
-				return false;
-            }
+            return false;
         }
 
         public Square moveComputerPiece(Square originSquare)
@@ -52,6 +49,29 @@ public class Board
             //actually change the squares of the board
         }
 
-
-	}
+        public Square[,] initializeBoardSquares(int BoardSize)
+        {
+            Square[,] squares = new Square[BoardSize, BoardSize];
+            return squares;
+        }
+        private int getIndex(Square square, Square[,] squares)
+        {
+            int count = -1;
+            if (square.getPiece() != null)
+            {
+                foreach(Square posibleSquare in squares)
+                {
+                    if(posibleSquare.Equals(square))
+                    {
+                        return count;
+                    }
+                    else
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+    }
 }
