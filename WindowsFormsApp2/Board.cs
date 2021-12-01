@@ -1,14 +1,14 @@
 ﻿using System;
 
-public class Class1
+public class Board
 {
-	public Class1()
+	public Board()
 	{
-     //add a map/array of squares with coordinate locations? when piece is moved update the board
-	//alpha beta - pass board into this
-    //heuristic function to evaluate pos
+        //add a map/array of squares with coordinate locations? when piece is moved update the board
+        //alpha beta - pass board into this
+        //heuristic function to evaluate pos
 
-		public Boolean isLegal(Square destinationSquare, Square originSquare)
+        public Boolean isLegal(Square destinationSquare, Square originSquare)
         {
             double xCoord = newLocation.location.getX();
             double yCoord = newLocation.location.getY();
