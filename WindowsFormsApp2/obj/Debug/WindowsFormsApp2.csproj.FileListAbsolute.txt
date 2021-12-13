@@ -15,3 +15,10 @@ C:\Users\jenny\source\repos\CheckersGame\WindowsFormsApp2\obj\Debug\WindowsForms
 C:\Users\jenny\source\repos\CheckersGame\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 C:\Users\jenny\source\repos\CheckersGame\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\jenny\source\repos\CheckersGame\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\student\source\repos\CheckersGame2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\Users\student\source\repos\CheckersGame2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PlayGame.resources
+C:\Users\student\source\repos\CheckersGame2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\student\source\repos\CheckersGame2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\student\source\repos\CheckersGame2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\student\source\repos\CheckersGame2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\student\source\repos\CheckersGame2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb

@@ -37,16 +37,65 @@ namespace WindowsFormsApp2
             }
             return false;
         }
-
-        public Square moveComputerPiece(Square originSquare)
-        {
+         
+   //     public Square moveComputerPiece(Square originSquare)
+       // {
             //gets the best move for the computer using alpha beta
-        }
+     //   }
 
-        public void moveUserPiece(Square originSquare, Square DestinationSquare)
+        public void moveUserPiece(Board board, Square[,] squares, Square destinationSquare, Square originSquare)
         {
-            originSquare.movePiece(DestinationSquare);
+            const int SQUARE_SIZE = 50;
+            double originXCoord = originSquare.getLocation().getX();
+            double originYCoord = originSquare.getLocation().getY();
+            int row = 1;
+            int col = 1;
+            for (int square = 0; square < 8; square++)
+            {
+                if (originXCoord > SQUARE_SIZE)
+                {
+                    originXCoord -= SQUARE_SIZE;
+                    ++row;
+                }
+                if (originYCoord > SQUARE_SIZE)
+                {
+                    originYCoord -= SQUARE_SIZE;
+                    ++col;
+                }
+            }
+            double destinXCoord = destinationSquare.getLocation().getX();
+            double destinYCoord = destinationSquare.getLocation().getY();
+            int destinationRow = 1;
+            int destinationCol = 1;
+            for (int square = 0; square < 8; square++)
+            {
+                if (destinXCoord > SQUARE_SIZE)
+                {
+                    destinXCoord -= SQUARE_SIZE;
+                    ++destinationRow;
+                }
+                if (destinYCoord > SQUARE_SIZE)
+                {
+                    destinYCoord -= SQUARE_SIZE;
+                    ++destinationCol;
+                }
+            }
+            if (board.isLegal(destinationSquare, originSquare))
+            {
+                Piece pieceToBeMoved = originSquare.getPiece();
+                originSquare.setPiece(null);
+                destinationSquare.setPiece(pieceToBeMoved);
+                squares[(int)originXCoord, (int)originYCoord] = originSquare;
+                squares[(int)destinXCoord, (int)destinYCoord] = destinationSquare;
+            }
+            //
+            //remove originPiece fom originLocation in the squares/ board list
+            //take original piece move to destination location
             //actually change the squares of the board
+            //if destinationsquare isLegal
+            //get location of originsquare 
+            //delete the originSquare piece
+            //put piece in destination piece
         }
 
         public Square[,] initializeBoardSquares(int BoardSize)

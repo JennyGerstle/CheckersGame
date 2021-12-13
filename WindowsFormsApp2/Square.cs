@@ -26,8 +26,13 @@ namespace WindowsFormsApp2
         {
             return this.piece;
         }
+        public Piece setPiece(Piece piece)
+        {
+            return this.piece;
+        }
         public void movePiece(Square newSquare)
         {
+            
             newSquare.givePiece(this.piece);
             this.piece = null;
 
