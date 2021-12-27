@@ -1,10 +1,20 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace WindowsFormsApp2
 {
 	class Board
 	{
-        //add a map/array of squares with coordinate locations? when piece is moved update the board
+        public Board()
+        {
+            List<Square> squares = new List<Square>();
+            for(int i = 0; i < 8; i++)
+            {
+                for(int j = 0; j < 8; j++)
+                {
+                    //initialize bboard
+                }
+            }
+        }
         //alpha beta - pass board into this
         //heuristic function to evaluate pos
 
@@ -43,48 +53,14 @@ namespace WindowsFormsApp2
             //gets the best move for the computer using alpha beta
      //   }
 
-        public void moveUserPiece(Board board, Square[,] squares, Square destinationSquare, Square originSquare)
+        public void moveUserPiece(Square[,] squares, Square destinationSquare, Square originSquare)
         {
-            const int SQUARE_SIZE = 50;
-            double originXCoord = originSquare.getLocation().getX();
-            double originYCoord = originSquare.getLocation().getY();
-            int row = 1;
-            int col = 1;
-            for (int square = 0; square < 8; square++)
+            Location originLoc = this.getLoc(originSquare);
+            Location destLoc = this.getLoc(destinationSquare);
+
+            if (this.isLegal(destinationSquare, originSquare))
             {
-                if (originXCoord > SQUARE_SIZE)
-                {
-                    originXCoord -= SQUARE_SIZE;
-                    ++row;
-                }
-                if (originYCoord > SQUARE_SIZE)
-                {
-                    originYCoord -= SQUARE_SIZE;
-                    ++col;
-                }
-            }
-            double destinXCoord = destinationSquare.getLocation().getX();
-            double destinYCoord = destinationSquare.getLocation().getY();
-            int destinationRow = 1;
-            int destinationCol = 1;
-            for (int square = 0; square < 8; square++)
-            {
-                if (destinXCoord > SQUARE_SIZE)
-                {
-                    destinXCoord -= SQUARE_SIZE;
-                    ++destinationRow;
-                }
-                if (destinYCoord > SQUARE_SIZE)
-                {
-                    destinYCoord -= SQUARE_SIZE;
-                    ++destinationCol;
-                }
-            }
-            if (board.isLegal(destinationSquare, originSquare))
-            {
-                Piece pieceToBeMoved = originSquare.getPiece();
-                originSquare.setPiece(null);
-                destinationSquare.setPiece(pieceToBeMoved);
+                originSquare.movePiece(destinationSquare);
                 squares[(int)originXCoord, (int)originYCoord] = originSquare;
                 squares[(int)destinXCoord, (int)destinYCoord] = destinationSquare;
             }
@@ -102,6 +78,29 @@ namespace WindowsFormsApp2
         {
             Square[,] squares = new Square[BoardSize, BoardSize];
             return squares;
+        }
+
+
+        private Location getLoc(Square originSquare)
+        {
+            const int SQUARE_SIZE = 50;
+            double XCoord = originSquare.getLocation().getX();
+            double YCoord = originSquare.getLocation().getY();
+            Location loca = new Location(1, 1);
+            for (int square = 0; square < 8; square++)
+            {
+                if (XCoord > SQUARE_SIZE)
+                {
+                    XCoord -= SQUARE_SIZE;
+                    loca.incrememtRow();
+                }
+                if (YCoord > SQUARE_SIZE)
+                {
+                    YCoord -= SQUARE_SIZE;
+                    loca.incrementCol();
+                }
+            }
+            return loca;
         }
         private int getIndex(Square square, Square[,] squares)
         {
