@@ -174,8 +174,9 @@ namespace WindowsFormsApp2
             return squares;
         }
 
-        
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-        
+        }
     }
 }
